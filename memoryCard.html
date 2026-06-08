@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match - Start Menu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('pic/bg2.png'), linear-gradient(to bottom, #A7F6FC, #42F1FF, #8AF7FF, #B8FAFF);
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 250px 0;
+        }
+
+        .container {
+            border: solid 4px purple;
+            width: 90%;
+            max-width: 450px;
+            background-image: linear-gradient(to bottom, #facade, #ff63a4);
+            box-sizing: border-box;
+            padding: 40px 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+            display: flex;
+            flex-direction: column;
+            /* Stack Title above Buttons */
+            align-items: center;
+            gap: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+            text-align: center;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 800;
+        }
+
+        .difficulty-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .select-title {
+            text-align: center;
+            color: #4a004a;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .difficulty {
+            background-image: linear-gradient(to right, #f7f0ac, #acf7f0, #f0acf7);
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            user-select: none;
+        }
+
+        .difficulty:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .difficulty:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn {
+            background-image: linear-gradient(to right, #f7f0ac, #acf7f0);
+            border: solid 2px purple;
+            color: #4a004a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 10px 24px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            user-select: none;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        }
+
+        .back-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #hellMode {
+            background-image: linear-gradient(135deg, #3b0505,#5f0505,#a61d0b,#FF0000,#5f0505,#3b0505);
+            color: #ffffff;
+        }
+        #hellMode:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+        #easyMode {
+            background-image: linear-gradient(to right, #a8e063, #56ab2f);
+        }
+        #normalMode {
+            background-image: linear-gradient(135deg, #f1f73c 0%, #e8b203 100%)
+        }
+        #hardMode {
+            background-image: linear-gradient(135deg, #FF0000, #CC0000);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-btn">⬅ Back to Menu</a>
+    <div class="container">
+        <div>
+            <h1>Memory Match Game</h1>
+        </div>
+
+        <div class="difficulty-container">
+            <div class="select-title">
+                <b>Select Difficulty</b>
+            </div>
+
+            <div class="difficulty" id="easyMode" onclick="startGame('easy')">
+                <div>Easy</div>
+            </div>
+            <div class="difficulty" id="normalMode" onclick="startGame('normal')">
+                <div>Normal</div>
+            </div>
+            <div class="difficulty" id="hardMode"  onclick="startGame('hard')">
+                <div>Hard</div>
+            </div>
+            <div class="difficulty" id="hellMode"  onclick="startGame('hell')">
+                <div>🔥Hell🔥</div>
+            </div>
+        </div>
+    </div>
+ <div class="ad">
+        <a href="https://www.roblox.com/share?code=b5e529481c78854b91732053b19ffbe6&type=ExperienceDetails&stamp=1780669868037" target="_blank">Click here for Roblox something special!</a>
+    </div>
+
+    <script>
+function startGame(difficulty) {
+        if (difficulty === 'easy') {
+            // Paste your EASY link inside the quotes below:
+            window.location.href = "easy_8.html";
+        } 
+        else if (difficulty === 'normal') {
+            // Paste your NORMAL link inside the quotes below:
+            window.location.href = "medium_16.html";
+        } 
+        else if (difficulty === 'hard') {
+            // Paste your HARD link inside the quotes below:
+            window.location.href = "hard_30.html";
+        }
+        else if (difficulty === 'hell') {
+            // Paste your HELL link inside the quotes below:
+            window.location.href = "hellMode_56.html";
+        }
+    }
+    </script>
+
+</body>
+
+</html>
